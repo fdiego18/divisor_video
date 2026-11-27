@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Divisor de Vídeo
+GenericName=Divisor de Vídeos sem Perda
+Comment=Divide vídeos automaticamente respeitando limite de tamanho com Stream Copy (FFmpeg)
+Exec=divisor_video_gui %F
+Icon=divisor_video
+Terminal=false
+Categories=AudioVideo;Video;Utility;
+MimeType=video/mp4;video/x-matroska;video/quicktime;video/x-msvideo;video/webm;
+StartupNotify=true

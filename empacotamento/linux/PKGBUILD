@@ -1,0 +1,35 @@
+# Mantenedor: Equipe de Engenharia
+# Receita para Arch Linux e Manjaro (`makepkg -si`)
+pkgname=divisor-video
+pkgver=2.0.0
+pkgrel=1
+pkgdesc="Aplicativo desktop e CLI em Rust para dividir vídeos sem perda de qualidade (Stream Copy via FFmpeg)"
+arch=('x86_64' 'aarch64')
+url="https://example.org/divisor_video"
+license=('MIT')
+depends=('ffmpeg' 'gtk3' 'libxkbcommon' 'wayland' 'libglvnd' 'dbus')
+makedepends=('cargo' 'pkgconf')
+source=()
+sha256sums=()
+
+build() {
+    cd "$startdir/../.."
+    export RUSTUP_TOOLCHAIN=stable
+    export CARGO_TARGET_DIR=target
+    cargo build --release --locked
+}
+
+check() {
+    cd "$startdir/../.."
+    cargo test --release --locked
+}
+
+package() {
+    cd "$startdir/../.."
+    install -Dm755 "target/release/divisor_video" "$pkgdir/usr/bin/divisor_video"
+    install -Dm755 "target/release/divisor_video_gui" "$pkgdir/usr/bin/divisor_video_gui"
+    install -Dm644 "empacotamento/linux/divisor_video.desktop" "$pkgdir/usr/share/applications/divisor_video.desktop"
+    install -Dm644 "empacotamento/linux/icone.svg" "$pkgdir/usr/share/icons/hicolor/scalable/apps/divisor_video.svg"
+    install -Dm644 "docs/DISTRIBUICAO_E_LICENCAS.md" "$pkgdir/usr/share/doc/$pkgname/DISTRIBUICAO_E_LICENCAS.md"
+    install -Dm644 "README.md" "$pkgdir/usr/share/doc/$pkgname/README.md"
+}

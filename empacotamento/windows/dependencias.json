@@ -1,0 +1,23 @@
+{
+  "ffmpeg": {
+    "version": "9.1",
+    "source_url": "https://ffmpeg.org/releases/ffmpeg-9.1.tar.xz",
+    "signature_url": "https://ffmpeg.org/releases/ffmpeg-9.1.tar.xz.asc",
+    "key_url": "https://ffmpeg.org/ffmpeg-devel.asc",
+    "signing_fingerprint": "FCF986EA15E6E293A5644F10B4322F04D67658D8",
+    "license": "LGPL-2.1-or-later",
+    "strategy": "Build official signed stable source; no third-party codec libraries, GPL, nonfree or network",
+    "source_sha256": null,
+    "source_sha256_note": "Computed and recorded only after verification with the pinned official signing key; not downloaded locally."
+  },
+  "test_only_ffmpeg": {
+    "version": "9.0.2",
+    "url": "https://www.gyan.dev/ffmpeg/builds/packages/ffmpeg-9.0.2-essentials_build.zip",
+    "checksum_url": "https://www.gyan.dev/ffmpeg/builds/packages/ffmpeg-9.0.2-essentials_build.zip.sha256",
+    "purpose": "Existing regression tests require libx264. Never copied into distribution."
+  },
+  "rust_toolchain": "1.97.1",
+  "target": "x86_64-pc-windows-msvc",
+  "sqlite": "rusqlite 0.37 / libsqlite3-sys locked in Cargo.lock, bundled",
+  "runtime": "MSVC crt-static; FFmpeg static MinGW runtime with Windows system CRT"
+}

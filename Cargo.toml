@@ -1,0 +1,65 @@
+[package]
+name = "divisor_video"
+version = "2.0.0"
+edition = "2024"
+description = "Aplicativo desktop e ferramenta CLI em Rust para dividir arquivos de vídeo em múltiplos segmentos respeitando limite de tamanho sem perda de qualidade (Stream Copy via FFmpeg/FFprobe)."
+authors = ["Equipe de Engenharia"]
+license = "MIT"
+readme = "README.md"
+keywords = ["video", "ffmpeg", "ffprobe", "splitter", "stream-copy", "egui"]
+categories = ["command-line-utilities", "gui", "multimedia::video"]
+default-run = "divisor_video"
+
+[features]
+default = ["gui"]
+windows-bundle = []
+embedded-tools = ["windows-bundle"]
+gui = ["dep:eframe", "dep:egui", "dep:rfd", "dep:notify-rust"]
+
+[[bin]]
+name = "divisor_video"
+path = "src/main.rs"
+
+[[bin]]
+name = "divisor_video_gui"
+path = "src/bin/divisor_video_gui.rs"
+required-features = ["gui"]
+
+[dependencies]
+# Núcleo e CLI
+sha2 = "0.10"
+clap = { version = "4", features = ["derive"] }
+ctrlc = "3"
+indicatif = "0.17"
+rayon = "1"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tempfile = "3"
+thiserror = "2"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+# Serviços desktop independentes de interface gráfica
+chrono = { version = "0.4", features = ["serde"] }
+dirs = "6"
+fs2 = "0.4"
+image = { version = "0.25", default-features = false, features = ["png", "jpeg"] }
+open = "5"
+rusqlite = { version = "0.37", features = ["bundled"] }
+
+# Camada gráfica desktop (isolada pela feature `gui`)
+eframe = { version = "0.36", optional = true }
+egui = { version = "0.36", optional = true }
+notify-rust = { version = "4", optional = true }
+rfd = { version = "0.17", optional = true }
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+codegen-units = 1
+
+[lints.rust]
+unsafe_code = "forbid"
+
+[build-dependencies]
+sha2 = "0.10"

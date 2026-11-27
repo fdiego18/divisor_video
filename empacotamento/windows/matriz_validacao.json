@@ -1,0 +1,696 @@
+{
+  "status": "nao_executado",
+  "nota": "Preencher somente em instalações limpas reais; correlacionar com SHA-256 dos artefatos.",
+  "resultados": [
+    {
+      "so": "Windows 10 x64",
+      "formato": "unico",
+      "build_so": null,
+      "sha256_artefato": null,
+      "operador": null,
+      "data_utc": null,
+      "testes": [
+        {
+          "item": "inicializacao_sem_console",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "tema_sistema_claro_escuro",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "selecao_arquivos_pastas",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "arrastar_soltar",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "miniaturas",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "processamento_simultaneo",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "videos_40_70MB",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "videos_maiores_1GB",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "limite_10000000_bytes",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "preservacao_audiovisual",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "cancelamento_limpeza",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "historico_sqlite",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "configuracoes_persistentes",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "abrir_pasta_saida",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "offline_rede_desconectada",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "usuario_sem_administrador",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "instalacao_desinstalacao",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "cache_corrupcao_recuperacao",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "cache_concorrencia_e_substituicao",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "caminhos_especiais",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "dlls_durante_todos_fluxos",
+          "resultado": "nao_executado",
+          "evidencia": null
+        }
+      ]
+    },
+    {
+      "so": "Windows 10 x64",
+      "formato": "portatil",
+      "build_so": null,
+      "sha256_artefato": null,
+      "operador": null,
+      "data_utc": null,
+      "testes": [
+        {
+          "item": "inicializacao_sem_console",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "tema_sistema_claro_escuro",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "selecao_arquivos_pastas",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "arrastar_soltar",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "miniaturas",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "processamento_simultaneo",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "videos_40_70MB",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "videos_maiores_1GB",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "limite_10000000_bytes",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "preservacao_audiovisual",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "cancelamento_limpeza",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "historico_sqlite",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "configuracoes_persistentes",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "abrir_pasta_saida",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "offline_rede_desconectada",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "usuario_sem_administrador",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "instalacao_desinstalacao",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "cache_corrupcao_recuperacao",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "cache_concorrencia_e_substituicao",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "caminhos_especiais",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "dlls_durante_todos_fluxos",
+          "resultado": "nao_executado",
+          "evidencia": null
+        }
+      ]
+    },
+    {
+      "so": "Windows 10 x64",
+      "formato": "instalador",
+      "build_so": null,
+      "sha256_artefato": null,
+      "operador": null,
+      "data_utc": null,
+      "testes": [
+        {
+          "item": "inicializacao_sem_console",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "tema_sistema_claro_escuro",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "selecao_arquivos_pastas",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "arrastar_soltar",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "miniaturas",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "processamento_simultaneo",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "videos_40_70MB",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "videos_maiores_1GB",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "limite_10000000_bytes",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "preservacao_audiovisual",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "cancelamento_limpeza",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "historico_sqlite",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "configuracoes_persistentes",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "abrir_pasta_saida",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "offline_rede_desconectada",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "usuario_sem_administrador",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "instalacao_desinstalacao",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "cache_corrupcao_recuperacao",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "cache_concorrencia_e_substituicao",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "caminhos_especiais",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "dlls_durante_todos_fluxos",
+          "resultado": "nao_executado",
+          "evidencia": null
+        }
+      ]
+    },
+    {
+      "so": "Windows 11 x64",
+      "formato": "unico",
+      "build_so": null,
+      "sha256_artefato": null,
+      "operador": null,
+      "data_utc": null,
+      "testes": [
+        {
+          "item": "inicializacao_sem_console",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "tema_sistema_claro_escuro",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "selecao_arquivos_pastas",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "arrastar_soltar",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "miniaturas",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "processamento_simultaneo",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "videos_40_70MB",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "videos_maiores_1GB",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "limite_10000000_bytes",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "preservacao_audiovisual",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "cancelamento_limpeza",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "historico_sqlite",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "configuracoes_persistentes",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "abrir_pasta_saida",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "offline_rede_desconectada",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "usuario_sem_administrador",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "instalacao_desinstalacao",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "cache_corrupcao_recuperacao",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "cache_concorrencia_e_substituicao",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "caminhos_especiais",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "dlls_durante_todos_fluxos",
+          "resultado": "nao_executado",
+          "evidencia": null
+        }
+      ]
+    },
+    {
+      "so": "Windows 11 x64",
+      "formato": "portatil",
+      "build_so": null,
+      "sha256_artefato": null,
+      "operador": null,
+      "data_utc": null,
+      "testes": [
+        {
+          "item": "inicializacao_sem_console",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "tema_sistema_claro_escuro",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "selecao_arquivos_pastas",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "arrastar_soltar",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "miniaturas",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "processamento_simultaneo",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "videos_40_70MB",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "videos_maiores_1GB",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "limite_10000000_bytes",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "preservacao_audiovisual",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "cancelamento_limpeza",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "historico_sqlite",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "configuracoes_persistentes",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "abrir_pasta_saida",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "offline_rede_desconectada",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "usuario_sem_administrador",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "instalacao_desinstalacao",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "cache_corrupcao_recuperacao",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "cache_concorrencia_e_substituicao",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "caminhos_especiais",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "dlls_durante_todos_fluxos",
+          "resultado": "nao_executado",
+          "evidencia": null
+        }
+      ]
+    },
+    {
+      "so": "Windows 11 x64",
+      "formato": "instalador",
+      "build_so": null,
+      "sha256_artefato": null,
+      "operador": null,
+      "data_utc": null,
+      "testes": [
+        {
+          "item": "inicializacao_sem_console",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "tema_sistema_claro_escuro",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "selecao_arquivos_pastas",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "arrastar_soltar",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "miniaturas",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "processamento_simultaneo",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "videos_40_70MB",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "videos_maiores_1GB",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "limite_10000000_bytes",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "preservacao_audiovisual",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "cancelamento_limpeza",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "historico_sqlite",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "configuracoes_persistentes",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "abrir_pasta_saida",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "offline_rede_desconectada",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "usuario_sem_administrador",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "instalacao_desinstalacao",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "cache_corrupcao_recuperacao",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "cache_concorrencia_e_substituicao",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "caminhos_especiais",
+          "resultado": "nao_executado",
+          "evidencia": null
+        },
+        {
+          "item": "dlls_durante_todos_fluxos",
+          "resultado": "nao_executado",
+          "evidencia": null
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+
+# Compilacao Rust
+/target/
+
+# Artefatos de distribuicao
+/dist/
+
+# Arquivos multimidia
+*.mp4
+*.mkv
+*.avi
+*.mov
+*.webm
+
+# Binarios compilados
+*.exe
+*.dll
+*.AppImage
+*.dmg
+
+# Arquivos temporarios
+*.tmp
+*.log
+
+# Credenciais
+.env
+.env.*
+!.env.example
