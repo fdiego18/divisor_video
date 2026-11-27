@@ -2,6 +2,8 @@
 # Fonte estável autenticado -> FFmpeg LGPL estático Windows x64. Executar no Linux.
 set -euo pipefail
 root=$(cd "$(dirname "$0")/../.." && pwd)
+# $0 pode ser relativo ao diretório de invocação; os cd abaixo não devem invalidá-lo.
+script="$root/empacotamento/windows/compilar_ffmpeg.sh"
 out=${1:-"$root/build/windows-deps"}
 mkdir -p "$out"
 out=$(cd "$out" && pwd)
@@ -29,7 +31,7 @@ if [[ -n "$expected" ]]; then
 fi
 cp "ffmpeg-$version.tar.xz" "ffmpeg-$version.tar.xz.asc" ffmpeg-devel.asc "$out/fontes/"
 # Include the exact scripts, manifest, build configuration and MinGW source/licensing.
-cp "$0" "$manifest" "$out/fontes/"
+cp "$script" "$manifest" "$out/fontes/"
 cd "$out"
 tar -xf "downloads/ffmpeg-$version.tar.xz"
 mkdir -p ffmpeg-build

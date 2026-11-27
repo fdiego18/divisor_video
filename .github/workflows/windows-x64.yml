@@ -13,24 +13,27 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 90
     steps:
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1 (Node.js 24)
       - name: Instalar compilador cruzado e ferramentas de autenticação
         run: |
           sudo sed -i 's/^Types: deb$/Types: deb deb-src/' /etc/apt/sources.list.d/ubuntu.sources
           sudo apt-get update
           sudo apt-get install -y gcc-mingw-w64-x86-64 g++-mingw-w64-x86-64 binutils-mingw-w64-x86-64 nasm make pkg-config curl gnupg jq zip
       - name: Compilar fonte oficial estável com assinatura verificada
+        shell: bash
         run: |
+          set -euo pipefail
           mkdir -p build/windows-deps
-          bash empacotamento/windows/compilar_ffmpeg.sh 2>&1 | tee build/windows-deps/compilacao-ffmpeg.log
-      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+          bash empacotamento/windows/compilar_ffmpeg.sh "$GITHUB_WORKSPACE/build/windows-deps" 2>&1 | tee build/windows-deps/compilacao-ffmpeg.log
+      - name: Validar e arquivar a entrega completa do FFmpeg
+        run: |
+          python3 -m unittest discover -s empacotamento/windows -p 'test_*.py'
+          python3 empacotamento/windows/validar_dependencias.py build/windows-deps
+          tar -cf build/ffmpeg-lgpl-windows-x64.tar -C build/windows-deps bin licencas fontes-correspondentes.zip compilacao-ffmpeg.log
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2 (Node.js 24)
         with:
           name: ffmpeg-lgpl-windows-x64
-          path: |
-            build/windows-deps/compilacao-ffmpeg.log
-            build/windows-deps/bin
-            build/windows-deps/licencas
-            build/windows-deps/fontes-correspondentes.zip
+          path: build/ffmpeg-lgpl-windows-x64.tar
           if-no-files-found: error
           retention-days: 30
   aplicativo:
@@ -40,11 +43,19 @@ jobs:
     env:
       RUSTUP_TOOLCHAIN: '1.97.1'
     steps:
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
-      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1 (Node.js 24)
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2 (Node.js 24)
         with:
           name: ffmpeg-lgpl-windows-x64
-          path: build/windows-deps
+          path: build/ffmpeg-transferencia
+      - name: Extrair e validar dependências antes de preparar o aplicativo
+        shell: pwsh
+        run: |
+          New-Item build/windows-deps -ItemType Directory -Force | Out-Null
+          tar -xf build/ffmpeg-transferencia/ffmpeg-lgpl-windows-x64.tar -C build/windows-deps
+          if ($LASTEXITCODE -ne 0) { throw 'Falha na extração das dependências' }
+          python empacotamento/windows/validar_dependencias.py build/windows-deps
+          if ($LASTEXITCODE -ne 0) { throw 'Entrega FFmpeg incompleta ou corrompida' }
       - name: Preparar Rust, MSVC e cache (somente ambiente de build)
         shell: pwsh
         run: |
@@ -90,7 +101,7 @@ jobs:
           ./empacotamento/windows/gerar_relatorio.ps1 -Dist dist/windows-x64
       - name: Publicar artefatos e evidências, sem declarar validação gráfica
         if: always()
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2 (Node.js 24)
         with:
           name: DivisorVideo-Windows-x64-nao-certificado
           path: dist/windows-x64/

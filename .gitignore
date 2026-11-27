@@ -21,6 +21,7 @@
 # Arquivos temporarios
 *.tmp
 *.log
+__pycache__/
 
 # Credenciais
 .env
